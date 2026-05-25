@@ -1,0 +1,58 @@
+/* Itens 5 e 6: Variáveis de Cores e Fontes da Versão 1 */
+:root {
+  --cor-fundo: #f4f4f4;
+  --cor-cabecalho: #eeeeee;
+  --cor-cinza-faixa: #e0e0e0;
+  --cor-borda: #cccccc;
+  --cor-texto: #333333;
+  --fonte: Arial, sans-serif;
+}
+
+body {
+  font-family: var(--fonte);
+  margin: 0;
+  background-color: var(--cor-fundo);
+}
+
+header {
+  background-color: var(--cor-cabecalho);
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+/* LÓGICA DO MENU HAMBÚRGUER (EXTRAS) */
+#menu-check { display: none; }
+.menu-nav, .btn-fechar { display: none; }
+
+.btn-abrir, .btn-fechar {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#menu-check:checked ~ .menu-nav { display: block; }
+#menu-check:checked ~ .btn-fechar { display: inline-block; }
+#menu-check:checked ~ .btn-abrir { display: none; }
+
+/* LAYOUT VERTICAL EM COLUNA ÚNICA */
+.bloco-titulo {
+  background: white;
+  border: 1px solid var(--cor-borda);
+  margin: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.faixa-cinza {
+  background-color: var(--cor-cinza-faixa);
+  padding: 30px 50px;
+  border-top: 1px solid var(--cor-borda);
+  border-bottom: 1px solid var(--cor-borda);
+  margin-bottom: 20px;
+}
+
+footer {
+  padding: 20px;
+  font-size: 12px;
+  color: #666;
+}
